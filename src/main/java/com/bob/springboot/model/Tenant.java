@@ -24,17 +24,42 @@ public class Tenant {
 	@Column(name="phoneNumber")
 	private String phoneNumber;
 	
+	@Column(name="idNumber")
+	private String idNumber;
+	
+	@Column(name="dateOfLease")
+	private String dateOfLease;
+	
+	@Column(name="monthsPaid")
+	private String monthsPaid;
+	
+	@Column(name="houseNumber")
+	private String houseNumber;
+	
+	@Column(name="dateofTransaction")
+	private String dateOfTransaction;
+
 	public Tenant() {
 		
 	}
 	
-	public Tenant(String firstName, String lastName, String phoneNumber) {
+
+	public Tenant(Long id, String firstName, String lastName, String phoneNumber, String idNumber, String dateOfLease,
+			String monthsPaid, String houseNumber, String dateOfTransaction) {
 		super();
+		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.phoneNumber = phoneNumber;
+		this.idNumber = idNumber;
+		this.dateOfLease = dateOfLease;
+		this.monthsPaid = monthsPaid;
+		this.houseNumber = houseNumber;
+		this.dateOfTransaction = dateOfTransaction;
 	}
-	
+
+
+
 	public Long getId() {
 		return id;
 	}
@@ -59,6 +84,49 @@ public class Tenant {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
+
+	public String getIdNumber() {
+		return idNumber;
+	}
+
+	public void setIdNumber(String idNumber) {
+		this.idNumber = idNumber;
+	}
+
+	public String getDateOfLease() {
+		return dateOfLease;
+	}
+
+	public void setDateOfLease(String dateOfLease) {
+		this.dateOfLease = dateOfLease;
+	}
+
+	public String getMonthsPaid() {
+		return monthsPaid;
+	}
+
+	public void setMonthsPaid(String monthsPaid) {
+		this.monthsPaid = monthsPaid;
+	}
+
+	public String getHouseNumber() {
+		return houseNumber;
+	}
+
+	public void setHouseNumber(String houseNumber) {
+		this.houseNumber = houseNumber;
+	}
+
+
+	public String getDateOfTransaction() {
+		return dateOfTransaction;
+	}
+
+
+	public void setDateOfTransaction(String dateOfTransaction) {
+		this.dateOfTransaction = dateOfTransaction;
+	}
+
+		
 	
 }
