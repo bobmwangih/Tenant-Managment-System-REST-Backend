@@ -24,7 +24,8 @@ import com.bob.springboot.repository.TenantRepository;
 
 @RestController
 @RequestMapping("/api/v1/")
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:3000")
+//https://kwa-j-property.herokuapp.com
 public class TenantController {
 
 	@Autowired
@@ -66,6 +67,8 @@ public class TenantController {
 		tenant.setMonthsPaid(tenantDetails.getMonthsPaid());
 		String afterUpdate = tenant.getMonthsPaid();
 		tenant.setHouseNumber(tenantDetails.getHouseNumber());
+		tenant.setHouseType(tenantDetails.getHouseType());
+		tenant.setRate(tenantDetails.getRate());
 		if(!(beforeUpdate.contentEquals(afterUpdate))){
 			tenant.setDateOfTransaction(DateTimeFormatter.ofPattern("yyyy/MM/dd HH:mm:ss").format(LocalDateTime.now()));
 		} 

@@ -38,14 +38,21 @@ public class Tenant {
 	
 	@Column(name="dateofTransaction")
 	private String dateOfTransaction;
+	
+	@Column(name="houseType")
+	private String houseType;
+	
+	@Column(name="rate")
+	private String rate;
 
 	public Tenant() {
 		
 	}
-	
+
+
 
 	public Tenant(Long id, String firstName, String lastName, String phoneNumber, String idNumber, String dateOfLease,
-			String monthsPaid, String houseNumber, String dateOfTransaction) {
+			String monthsPaid, String houseNumber, String dateOfTransaction, String houseType, String rate) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -56,6 +63,8 @@ public class Tenant {
 		this.monthsPaid = monthsPaid;
 		this.houseNumber = houseNumber;
 		this.dateOfTransaction = dateOfTransaction;
+		this.houseType = houseType;
+		this.rate = rate;
 	}
 
 
@@ -125,6 +134,30 @@ public class Tenant {
 
 	public void setDateOfTransaction(String dateOfTransaction) {
 		this.dateOfTransaction = dateOfTransaction;
+	}
+
+
+
+	public String getHouseType() {
+		return houseType;
+	}
+
+
+
+	public void setHouseType(String houseType) {
+		this.houseType = houseType;
+	}
+
+
+
+	public String getRate() {
+		return rate;
+	}
+
+
+
+	public void setRate(String rate) {
+		this.rate = rate;
 	}
 
 		
